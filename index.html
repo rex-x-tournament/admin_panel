@@ -1,112 +1,87 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://kit.fontawesome.com/8aa17a250d.js" crossorigin="anonymous"></script>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
-    *{ overflow-x: hidden; }
-    h1,h2,h3,h4,h5,h6 ,p { margin: 0; }
-    body { padding: 0; margin: 0; background: linear-gradient(360deg, #091b33, #00a9a9, #172459); color: #fff; font-family: 'Poppins' , sans-serif ; }
-    .header { display: flex; align-items: center; padding: 10px; background: #04365f; color: #fff; box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; justify-content: space-between; }
+    * { overflow-x: hidden; }
+    h1, h2, h3, h4, h5, h6, p { margin: 0; }
+    body { padding: 0; margin: 0; background: linear-gradient(360deg, #091b33, #00a9a9, #172459); color: #fff; font-family: 'Poppins', sans-serif; }
+    .header { display: flex; align-items: center; padding: 10px; background: #04365f; color: #fff; box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; }
     .header h2 { margin: 0px 0px 0px 10px; font-family: "Henny Penny", serif; color: e7e7e7; }
-    .header img { border-radius: 125px; width: 40px; height: 40px; }
-    #tournamentForm { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80vh; }
-    h1 { font-weight: 300; text-align: center; font-size: 26px; overflow: hidden; }
-    input , button , select{ padding: 10px 8px 10px 15px; width: 90%; border-radius: 25px; border: 1px solid #939393; margin: 10px 0px 10px 0px; outline: none; font-weight: 400; font-family: "Poppins", serif; }
-    button { color: #fff; background: #000; border: none; overflow: hidden; }
-    textarea { width: 90%; resize: none; height: 100px; border-radius: 12px; outline: none; padding: 10px; }
-    input , select , textarea{ background: #c1c1c1; color: #000; }
-    label { font-size: 21px; overflow: hidden; }
-    input[type="file"]::file-selector-button { border: 2px solid #6c5ce7; padding: 0.2em 0.4em; border-radius: 0.2em; background-color: #a29bfe; transition: 1s; } 
-    input[type="file"]::file-selector-button:hover { background-color: #81ecec; border: 2px solid #00cec9; }
-    a , i , .header_links { overflow: hidden; font-size: 18px; color: #fff; padding: 3px; border: none; }
-    i { background-color: #ffff00; padding: 10px; color: #353535; border-radius: 125px; }
+    .header img { border-radius: 125px; width: 40px; }
+    .customer-text { display: flex; align-items: center; gap: 10px; margin: 10px; }
+    .customer-text hr { flex-grow: 1; border: none; border-top: 1px solid #FFF; }
+    p { margin: 10px; font-size: 16px; font-weight: 500; }
+    .container { border-radius: 8px; padding: 20px; text-align: center; }
+    .box { background: #1e293b; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); border-radius: 12px; }
+    h1 { font-size: 24px; color: #38bdf8; margin-bottom: 20px; }
+    .qr-code { margin: 20px 0; padding: 10px; background: #0f172a; border: 2px solid #38bdf8; border-radius: 8px; display: inline-block; }
+    input[type="file"] { margin: 20px 0; padding: 10px; border-radius: 4px; }
+    input[type="file"]::file-selector-button { border: 2px solid #6c5ce7; padding: 0.2em 0.4em; border-radius: 0.2em; background-color: #a29bfe; transition: 1s; }
+    button { background: linear-gradient(45deg, #091b33, #00a9a9, #172459); border-radius: 25px; border: none; color: #fff; width: 80%; padding: 8px; font-weight: 600; font-family: 'Poppins', sans-serif; }
 </style>
-<div class="ds">
-    <div class="header">
-        <img src="https://i.ibb.co/7WY3rnB/icon.jpg" class="image">
-        <div class="header_links">
-            <a href="add_coins.html"><i class="fa-solid fa-database"></i></a>
-            <a href="remove.html"><i class="fa-solid fa-trash" style="background: #ff0000;"></i></a>
-            <a href="room.html"><i class="fa-solid fa-pen-nib" style="background: #2196F3;"></i></a>
-            <a href="result.html"><i class="fa-solid fa-square-poll-vertical" style="background: #9a21f3;"></i></a>
-            <a href="up_remove.html"><i class="fa-solid fa-xmark" style="background: #f3219d;"></i></a>
-        </div>
-    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<div class="header">
+    <img src="https://i.ibb.co/c8pX0LG/icon.png">
+    <h2>Next Move</h2>
 </div>
+<div class="customer-text">
+    <h3>App Suspended</h3>
+    <hr>
+</div>
+<p>Your App Is Suspended Because You Not Paying The Amount . Please Pay And Renew The App</p>
+<div class="container">
+    <div class="box">
+  <div id="qr-code" class="qr-code"></div>
+  <p>Amount: ₹599</p>
 
-<form id="tournamentForm">
-    <h1>Tournament Registration</h1>
-    <input type="text" id="name" name="name" required placeholder="Tournament Name:">
-    <label for="image">Upload Image:</label>
-    <input type="file" id="image" name="image" accept="image/*" required>
-    <input type="number" id="price" name="price" required placeholder="Entry Fee:">
-    <label for="mode">Mode:</label>
-    <select id="mode" name="mode" required>
-        <option value="CS">Clash Squad</option>
-        <option value="LW">Lone Wolf</option>
-        <option value="BR">BR</option>
-    </select>
-    <textarea id="prize" placeholder="Prize Pool: "></textarea>
-    <input type="number" id="slot" name="slot" required placeholder="Slot:">
-    <input type="text" id="mouse" name="mouse" required placeholder="Time:"> <!-- Added input for mouse -->
+  <form action="https://script.google.com/macros/s/AKfycbwlxpRpcSr-1OvhvmAo2-6eokTSdYG3U7G_YdnND2btudeqCGyHbdE9Uf2CCXpD73OTbw/exec" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" id="image" accept="image/*" required><br>
     <button type="submit">Submit</button>
-</form>
-
+  </form>
+</div>
+</div>
 <script>
-document.getElementById('tournamentForm').addEventListener('submit', function(e) {
+  const qrCode = new QRCode(document.getElementById("qr-code"), {
+    text: "upi://pay?pa=createprincemahto-2@okaxis&pn=Next%20Move&am=599",
+    width: 150,
+    height: 150,
+    colorDark: "#38bdf8",
+    colorLight: "#0f172a",
+  });
+
+  document.querySelector('form').addEventListener('submit', async function(e) {
     e.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const price = document.getElementById('price').value;
-    const mode = document.getElementById('mode').value;
-    const prize = document.getElementById('prize').value;
-    const slot = document.getElementById('slot').value;
-    const mouse = document.getElementById('mouse').value; // Capture mouse input
-    const imageFile = document.getElementById('image').files[0];
-
-    const formData = new FormData();
-    formData.append('image', imageFile);
-
-    fetch('https://api.imgur.com/3/image', {
-        method: 'POST',
-        headers: {
-            'Authorization': 'Client-ID 95c2a4aeb3aee9c'
-        },
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            const imageUrl = data.data.link;
-
-            const tournamentData = {
-                name: name,
-                price: price,
-                mode: mode,
-                prize: prize,
-                slot: slot,
-                mouse: mouse, // Add mouse data
-                image: imageUrl
-            };
-
-            fetch('https://script.google.com/macros/s/AKfycbzwmixRZr6miROtPQ303-72jVDy1fTMKY5jUzgONTzQOYnuaNoVF7DsXRyb5UYeYQCW/exec', {
-                method: 'POST',
-                body: JSON.stringify(tournamentData)
-            })
-            .then(response => response.json())
-            .then(responseData => {
-                alert('Tournament data submitted successfully!');
-            })
-            .catch(error => {
-                alert('Error saving data to sheet');
-            });
+    const formData = new FormData(this);
+    const fileInput = document.getElementById('image');
+    if (fileInput.files.length > 0) {
+      const imgbbApiKey = 'a1aab7277069e3d6fa62ab397ae5dfca';
+      try {
+        const response = await fetch(`https://api.imgbb.com/1/upload?key=${imgbbApiKey}`, {
+          method: 'POST',
+          body: formData,
+        });
+        const result = await response.json();
+        if (result.success) {
+          const imageUrl = result.data.url;
+          formData.append('imageUrl', imageUrl);
+          fetch('https://script.google.com/macros/s/AKfycbwlxpRpcSr-1OvhvmAo2-6eokTSdYG3U7G_YdnND2btudeqCGyHbdE9Uf2CCXpD73OTbw/exec', {
+            method: 'POST',
+            body: formData,
+          }).then(response => {
+            if (response.ok) {
+              alert('Data submitted successfully!');
+            } else {
+              alert('Error submitting data.');
+            }
+          });
         } else {
-            alert('Error uploading image');
+          alert('Failed to upload image.');
         }
-    })
-    .catch(error => {
-        alert('Error uploading image');
-    });
-});
+      } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred.');
+      }
+    }
+  });
 </script>
